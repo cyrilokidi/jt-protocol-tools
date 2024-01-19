@@ -1,0 +1,16 @@
+{
+  "name": "jt-tools",
+  "version": "0.0.1",
+  "description": "JT protocol tools.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jt",
+    "jt-tools",
+    "jt808"
+  ],
+  "author": "Cyril Okidi <okidicyril@gmail.com>",
+  "license": "ISC"
+}
