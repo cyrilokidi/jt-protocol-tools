@@ -12,5 +12,8 @@
     "jt808"
   ],
   "author": "Cyril Okidi <okidicyril@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
 }
