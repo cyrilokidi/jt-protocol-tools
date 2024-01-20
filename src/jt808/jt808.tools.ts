@@ -39,4 +39,15 @@ export class JT808Tools {
         return checkCode;
     }
 
+    static hexToDecimal(data: string): number {
+        return parseInt(data, 16);
+    }
+
+    static hexToBinary(data: string, padding: number): string {
+        return (parseInt(data, 16).toString(2)).padStart(padding, '0');
+    }
+
+    static binaryToDecimal(data: string): number {
+        return parseInt(data, 2);
+    }
 }
