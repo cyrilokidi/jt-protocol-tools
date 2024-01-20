@@ -4,7 +4,7 @@ import { JT808Tools } from "./jt808.tools";
 export class JT808Message {
     readonly data: string;
 
-    constructor(data: Buffer) {
+    constructor(data: string) {
         const deserialized = JT808Tools.deserialize(data);
 
         if (JT808Tools.calcCheckCode(deserialized) !== 0)

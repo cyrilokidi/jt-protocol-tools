@@ -6,12 +6,10 @@ export enum EJT808EscapeCharacter {
 }
 
 export class JT808Tools {
-    static deserialize(data: Buffer): string {
+    static deserialize(data: string): string {
         let result = "";
 
         const message = data
-            .toString('hex')
-            .trim()
             .replace(/FLAGBIT/, "")
             .split("")
             .filter((_, i, a) => ((i > 1) && (i < a.length - (1 + 1))));

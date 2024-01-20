@@ -1,9 +1,9 @@
 import { JT808Message } from "./jt808.message";
 
-export class JT808 {
+export default class JT808 {
     readonly message: JT808Message;
 
-    constructor(data: Buffer) {
+    constructor(data: string) {
         this.message = new JT808Message(data);
     }
 }
