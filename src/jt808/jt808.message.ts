@@ -2,9 +2,10 @@ import { EJT808MessageId } from "./header/jt808.header";
 import { JT808MessageHeader } from "./header/jt808.message.header";
 import { JT808Error } from "./jt808.error";
 import { JT808Tools } from "./jt808.tools";
+import { JT808TerminalAuthenticationMessage } from "./terminal-management/terminal-authentication/jt808.terminal-authentication.message";
 import { JT808TerminalRegistrationMessage } from "./terminal-management/terminal-registration/jt808.terminal-registration.message";
 
-export type TJT808MessageBody = JT808TerminalRegistrationMessage;
+export type TJT808MessageBody = JT808TerminalRegistrationMessage | JT808TerminalAuthenticationMessage;
 
 export class JT808Message {
     private readonly data: string;
@@ -30,6 +31,9 @@ export class JT808Message {
         switch (this.header.content.messageId) {
             case EJT808MessageId.TERMINAL_REGISTRATION:
                 return new JT808TerminalRegistrationMessage(this.rawBody);
+
+            case EJT808MessageId.TERMINAL_AUTHENTICATION:
+                return new JT808TerminalAuthenticationMessage(this.rawBody);
 
             default:
                 throw new JT808Error('Invalid message.');
