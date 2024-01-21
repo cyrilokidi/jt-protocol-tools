@@ -50,4 +50,16 @@ export class JT808Tools {
     static binaryToDecimal(data: string): number {
         return parseInt(data, 2);
     }
+
+    static decimalToHex(data: number, padding: number): string {
+        return data.toString(16).padStart(padding, '0');
+    }
+
+    static binaryToHexadecimal(data: string, padding: number): string {
+        return (parseInt(data, 2).toString(16)).padStart(padding, '0');
+    }
+
+    static decimalToBinary(data: number): string {
+        return data.toString(2);
+    }
 }
