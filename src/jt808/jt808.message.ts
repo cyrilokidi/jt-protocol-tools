@@ -2,7 +2,7 @@ import { EJT808MessageId } from "./header/jt808.header";
 import { JT808MessageHeader } from "./header/jt808.message.header";
 import { JT808Error } from "./jt808.error";
 import { JT808Tools } from "./jt808.tools";
-import { JT808TerminalRegistrationMessage } from "./terminal-management/terminal-registration/jt808-terminal-registration.message";
+import { JT808TerminalRegistrationMessage } from "./terminal-management/terminal-registration/jt808.terminal-registration.message";
 
 export type TJT808MessageBody = JT808TerminalRegistrationMessage;
 

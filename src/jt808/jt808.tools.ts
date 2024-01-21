@@ -62,4 +62,18 @@ export class JT808Tools {
     static decimalToBinary(data: number): string {
         return data.toString(2);
     }
+
+    static textToHex(data: string): string {
+        let result = "";
+
+        for (let i = 0; i < data.length; i++) {
+            result += data.charCodeAt(i).toString(16);
+        }
+
+        return result;
+    }
+
+    static calcBodyLength(data: string): number | undefined {
+        return data.match(/(..?)/g)?.length;
+    }
 }
