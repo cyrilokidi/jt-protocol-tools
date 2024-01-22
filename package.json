@@ -1,5 +1,5 @@
 {
-  "name": "jt-tools",
+  "name": "jt-protocol-tools",
   "version": "0.0.1",
   "description": "JT protocol tools.",
   "main": "dist/index.js",
@@ -15,7 +15,6 @@
   },
   "keywords": [
     "jt",
-    "jt-tools",
     "jt808"
   ],
   "author": "Cyril Okidi <okidicyril@gmail.com>",
