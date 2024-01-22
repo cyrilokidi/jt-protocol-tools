@@ -27,6 +27,26 @@ export class JT808Tools {
         return result;
     }
 
+    static serialize(data: string): string {
+        let result: string = EJT808EscapeCharacter['7e'];
+
+        const message = data
+            .replace(/FLAGBIT/, "")
+            .split("");
+
+        for (let i = 0; i < message.length; i++) {
+            if (message.slice(i, i + EJT808EscapeCharacter['7d'].length).join("") === EJT808EscapeCharacter['7d']) {
+                result += EJT808EscapeCharacter['7d01'];
+                i += EJT808EscapeCharacter['7d'].length - 1;
+            } else if (message.slice(i, i + EJT808EscapeCharacter['7e'].length).join("") === EJT808EscapeCharacter['7e']) {
+                result += EJT808EscapeCharacter['7d02'];
+                i += EJT808EscapeCharacter['7e'].length - 1;
+            } else result += message[i];
+        }
+
+        return result + EJT808EscapeCharacter['7e'];
+    }
+
     static calcCheckCode(message: any): number {
         const byteArray = message.match(/.{1,2}/g).map((byte: any) => parseInt(byte, 16));
 
