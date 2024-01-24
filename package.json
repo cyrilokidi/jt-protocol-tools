@@ -1,6 +1,6 @@
 {
   "name": "jt-protocol-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JT protocol tools.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
