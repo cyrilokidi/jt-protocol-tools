@@ -69,7 +69,11 @@ export class JT808ResponseHeader implements IJT808Header<IJT808ResponseHeaderCon
         return this.options.terminalPhoneNumber;
     }
 
+    // private get messageSerialNumber(): string {
+    //     return JT808Tools.decimalToHex(this.options.messageSerialNumber + 1, EJT808HeaderContentFieldWordCount.MESSAGE_SERIAL_NUMBER);
+    // }
+
     private get messageSerialNumber(): string {
-        return JT808Tools.decimalToHex(this.options.messageSerialNumber + 1, EJT808HeaderContentFieldWordCount.MESSAGE_SERIAL_NUMBER);
+        return JT808Tools.decimalToHex(0, EJT808HeaderContentFieldWordCount.MESSAGE_SERIAL_NUMBER);
     }
 }
